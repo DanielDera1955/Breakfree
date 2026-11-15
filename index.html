@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make Money with ChatGPT and Facebook Ads | Live Training</title>
+<meta name="description" content="A live training on finding buyers, writing ads with ChatGPT and running Facebook and Instagram ads to work toward your first $1,000 in sales.">
+<meta property="og:title" content="Make Money with ChatGPT and Facebook Ads | Live Training">
+<meta property="og:description" content="A live training on finding buyers, writing ads with ChatGPT and running Facebook and Instagram ads to work toward your first $1,000 in sales.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--ink:#14161a;--muted:#5b6370;--bg:#fbfaf7;--card:#fff;--line:#e8e4da;--accent:#0b6b4f;--accent2:#0a5640;--warn:#b4491c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(28px,6vw,42px);line-height:1.15;margin:12px 0 14px}
+h2{font-size:clamp(23px,4.5vw,30px);line-height:1.25;margin:0 0 16px}
+p{margin:0 0 14px}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.sub{font-size:19px;color:var(--muted)}
+.btn{display:block;width:100%;text-align:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:16px 20px;border-radius:12px;font-size:18px;border:0;cursor:pointer}
+.btn:hover{background:var(--accent2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.price-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:6px 0 4px}
+.price{font-size:40px;font-weight:800}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-bottom:12px;background:#fff}
+.toggle button{border:0;background:none;padding:8px 16px;font-size:14px;cursor:pointer;font-weight:600;color:var(--muted)}
+.toggle button.on{background:var(--ink);color:#fff}
+.seats{color:var(--warn);font-weight:700;font-size:15px}
+ul.clean{padding-left:0;list-style:none;margin:0}
+ul.clean li{padding:8px 0 8px 30px;position:relative}
+ul.yes li:before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:800}
+ul.no li:before{content:"\2717";position:absolute;left:0;color:var(--warn);font-weight:800}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:600px){.grid.two{grid-template-columns:1fr 1fr}}
+.shots img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.mod{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.mod:first-child{border-top:0}
+.mod b.n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:15px}
+details{border-top:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:700}
+.video{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000;margin-top:18px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.note{font-size:13.5px;color:var(--muted)}
+footer{padding:30px 0 110px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted)}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:12px;align-items:center;z-index:9}
+.sticky .t{flex:1;font-size:14px;line-height:1.3}
+.sticky .btn{width:auto;padding:12px 18px;font-size:16px}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+
+<!--
+=====================================================
+ EDIT ONLY THE CONFIG BLOCK AT THE BOTTOM OF THIS FILE
+ (search for: const CONFIG)
+=====================================================
+-->
+
+<main>
+<section id="top">
+  <div class="wrap">
+    <div class="eyebrow" data-t="eyebrow"></div>
+    <h1 data-t="headline"></h1>
+    <p class="sub" data-t="subhead"></p>
+
+    <div id="videoBox" class="video hide"><iframe id="vid" allowfullscreen loading="lazy"></iframe></div>
+
+    <div class="card" style="margin-top:22px">
+      <div class="toggle" role="tablist" aria-label="Currency">
+        <button id="tNGN" class="on" onclick="setCur('NGN')">Pay in Naira</button>
+        <button id="tUSD" onclick="setCur('USD')">Pay in USD</button>
+      </div>
+      <div class="price-row"><span class="price" id="price1"></span></div>
+      <p class="seats" id="seats1"></p>
+      <a class="btn" id="cta1" href="#" data-cta>Reserve my seat</a>
+      <p class="note" style="margin:10px 0 0" data-t="payNote"></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Let's be honest</h2>
+    <ul class="clean no" id="pains"></ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 data-t="storyTitle"></h2>
+    <div id="story"></div>
+  </div>
+</section>
+
+<section id="proofSec">
+  <div class="wrap">
+    <h2>What students say</h2>
+    <div class="grid two shots" id="shots"></div>
+    <p class="note" style="margin-top:14px">Results vary. These are messages from past students and depend on each person's effort, offer and market.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 data-t="whyTitle"></h2>
+    <div id="why"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What you will learn</h2>
+    <div id="mods"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid two">
+      <div class="card"><h2 style="font-size:21px">This is for you if</h2><ul class="clean yes" id="forYes"></ul></div>
+      <div class="card"><h2 style="font-size:21px">Not for you if</h2><ul class="clean no" id="forNo"></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 data-t="hostTitleH"></h2>
+    <div id="host"></div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <h2>Join the training</h2>
+    <div class="card">
+      <ul class="clean yes" id="includes"></ul>
+      <div class="price-row" style="margin-top:14px"><span class="price" id="price2"></span></div>
+      <p class="seats" id="seats2"></p>
+      <a class="btn" id="cta2" href="#" data-cta>Reserve my seat</a>
+      <p class="note" style="margin:10px 0 0" data-t="refundNote"></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Questions</h2>
+    <div id="faq"></div>
+    <p style="margin-top:18px">Still unsure? <a id="wa" href="#" target="_blank" rel="noopener">Message us on WhatsApp</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p data-t="footerBrand"></p>
+    <p><a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms.html">Terms of Service</a></p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="t"><b id="stickyPrice"></b><br><span id="stickySeats" class="seats" style="font-size:13px"></span></div>
+  <a class="btn" href="#" data-cta>Reserve my seat</a>
+</div>
+
+<script>
+/* ==================== EDIT THIS BLOCK ==================== */
+const CONFIG = {
+  brand: "REPLACE Brand Name",
+  eyebrow: "Live online training | REPLACE date and time (WAT)",
+  headline: "Learn to sell with ChatGPT and Facebook Ads, even if you have never run an ad before",
+  subhead: "A live, practical training that shows you how to find buyers, write ads with ChatGPT, launch on Facebook and Instagram, and work toward your first $1,000 in sales.",
+
+  // Pricing
+  priceNGN: 15000,
+  priceUSD: 12,
+  checkoutNGN: "https://selar.com/REPLACE-NGN-LINK",
+  checkoutUSD: "https://selar.com/REPLACE-USD-LINK",
+
+  // Seats: update seatsTaken by hand after each confirmed sale
+  seatCap: 20,
+  seatsTaken: 0,
+
+  whatsapp: "234XXXXXXXXXX",
+  videoEmbed: "",
+  pixelId: "",
+
+  payNote: "Secure checkout. You get access details right after payment.",
+  refundNote: "REPLACE: Refund policy in one line, e.g. Attend the full training, and if you feel it was not worth it, message us within 48 hours for a refund.",
+
+  pains: [
+    "You have spent money on ads or courses and still do not know what went wrong.",
+    "You post every day, but people like your content and do not buy.",
+    "You hear about people making sales online and wonder what they know that you do not.",
+    "You have a product or service, but no steady way to get buyers to it."
+  ],
+
+  storyTitle: "Why this training exists",
+  story: [
+    "REPLACE: Two or three true sentences from the trainer. What she struggled with before ads worked, and what changed.",
+    "REPLACE: What she has since done with ads for her own business or clients. Only include numbers she can show proof of."
+  ],
+
+  whyTitle: "Why most people lose money on ads",
+  why: [
+    { h: "They advertise before they know the buyer.", p: "Ads aimed at everyone reach no one. When you know exactly who needs your offer, the same budget goes much further." },
+    { h: "Their offer is not clear.", p: "If a stranger cannot tell what you sell and why it matters in a few seconds, they scroll past, no matter how good the ad looks." },
+    { h: "They guess instead of testing.", p: "Winning ads come from small, tracked tests with a fixed budget. Most beginners spend big on one ad and give up when it fails." }
+  ],
+
+  modules: [
+    { h: "Position your product so people understand it fast", p: "Write a clear offer that says who it is for and why they should care." },
+    { h: "Research your audience with ChatGPT", p: "Use simple prompts to learn what your buyers want, fear and search for." },
+    { h: "Set up your Facebook and Instagram ad account", p: "Business account, pixel and campaign structure, done step by step." },
+    { h: "Write ad copy and plan creatives with ChatGPT", p: "Turn your research into hooks, captions and ad ideas you can use right away." },
+    { h: "Build a simple sales path", p: "Connect your ad to a page, WhatsApp or checkout so interest turns into orders." },
+    { h: "Test with a small budget and track results", p: "Know what to measure, what to cut and what to scale." },
+    { h: "Your plan toward your first $1,000 in sales", p: "Work out how many sales you need and map the steps to get there." }
+  ],
+
+  testimonials: ["t1.jpg", "t2.jpg", "t3.jpg", "t4.jpg", "t5.jpg", "t6.jpg"],
+
+  forYes: [
+    "You sell a product or service, or want to start selling online.",
+    "You are ready to follow the steps and put in the work.",
+    "You can set aside a small ad budget to test with."
+  ],
+  forNo: [
+    "You want money with no effort or no work on your offer.",
+    "You expect results without testing or fixing things that fail.",
+    "You are not ready to spend any money on ads."
+  ],
+
+  hostTitleH: "Meet your trainer",
+  host: [
+    "REPLACE: Trainer name and role. One short paragraph on her experience with ads, such as years of practice, types of clients and how many people she has trained. Only claims she can back up."
+  ],
+
+  includes: [
+    "Live training session (REPLACE date, platform and length)",
+    "REPLACE: Replay access and for how long",
+    "REPLACE: Any bonus, template or community access"
+  ],
+
+  faq: [
+    { q: "Do I need experience with ads?", a: "No. The training starts from the basics and walks you through each step." },
+    { q: "Do I need a big budget?", a: "No. You will learn to test with a small budget first. You decide how much you are comfortable spending." },
+    { q: "Is a result guaranteed?", a: "No. Results depend on your product, your offer, your effort and your testing. The training gives you the method and the plan." },
+    { q: "When and where is the training?", a: "REPLACE: Date, time (WAT) and platform." },
+    { q: "Will there be a replay?", a: "REPLACE: Yes or no, and for how long." },
+    { q: "Can I pay from outside Nigeria?", a: "Yes. Switch to Pay in USD above and use the USD checkout." },
+    { q: "What if I have a payment problem?", a: "Message us on WhatsApp with your name and payment receipt and we will sort it out." }
+  ],
+
+  footerBrand: "REPLACE Brand Name. All rights reserved."
+};
+/* ================== END CONFIG ================== */
+
+(function(){
+  var C = CONFIG, cur = "NGN";
+  var $ = function(id){return document.getElementById(id)};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+  // Auto-detect Nigeria for default currency
+  try{
+    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    var lang = (navigator.language||"").toLowerCase();
+    if(tz !== "Africa/Lagos" && lang.indexOf("ng") === -1) cur = "USD";
+  }catch(e){}
+
+  document.querySelectorAll("[data-t]").forEach(function(el){
+    var k = el.getAttribute("data-t"); if(C[k] !== undefined) el.textContent = C[k];
+  });
+
+  function list(id, arr){ $(id).innerHTML = arr.map(function(x){return "<li>"+esc(x)+"</li>"}).join(""); }
+  list("pains", C.pains); list("forYes", C.forYes); list("forNo", C.forNo); list("includes", C.includes);
+  $("story").innerHTML = C.story.map(function(p){return "<p>"+esc(p)+"</p>"}).join("");
+  $("host").innerHTML = C.host.map(function(p){return "<p>"+esc(p)+"</p>"}).join("");
+  $("why").innerHTML = C.why.map(function(w){return "<p><b>"+esc(w.h)+"</b><br>"+esc(w.p)+"</p>"}).join("");
+  $("mods").innerHTML = C.modules.map(function(m,i){return '<div class="mod"><b class="n">'+(i+1)+'</b><div><b>'+esc(m.h)+'</b><br><span style="color:var(--muted)">'+esc(m.p)+'</span></div></div>'}).join("");
+  $("faq").innerHTML = C.faq.map(function(f){return "<details><summary>"+esc(f.q)+"</summary><p style='margin-top:10px'>"+esc(f.a)+"</p></details>"}).join("");
+
+  // Testimonials: hide any image that is missing, hide section if none load
+  var shots = $("shots"), loaded = 0, pending = C.testimonials.length;
+  if(!pending) $("proofSec").classList.add("hide");
+  C.testimonials.forEach(function(f){
+    var img = new Image(); img.loading = "lazy"; img.alt = "Student message";
+    img.onload = function(){ loaded++; shots.appendChild(img); done(); };
+    img.onerror = function(){ done(); };
+    img.src = "testimonials/" + f;
+  });
+  function done(){ pending--; if(pending===0 && loaded===0) $("proofSec").classList.add("hide"); }
+
+  if(C.videoEmbed){ $("vid").src = C.videoEmbed; $("videoBox").classList.remove("hide"); }
+  $("wa").href = "https://wa.me/" + C.whatsapp;
+
+  if(C.pixelId){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', C.pixelId); fbq('track','PageView');
+  }
+
+  function fmt(c){ return c==="NGN" ? "₦"+C.priceNGN.toLocaleString("en-NG") : "$"+C.priceUSD; }
+  function seatsText(){
+    var left = Math.max(0, C.seatCap - C.seatsTaken);
+    return left > 0 ? left+" of "+C.seatCap+" seats left" : "Sold out. Message us on WhatsApp to join the waitlist.";
+  }
+  function render(){
+    var p = fmt(cur), s = seatsText(), soldOut = (C.seatCap - C.seatsTaken) <= 0;
+    ["price1","price2"].forEach(function(i){$(i).textContent = p});
+    ["seats1","seats2","stickySeats"].forEach(function(i){$(i).textContent = s});
+    $("stickyPrice").textContent = p;
+    $("tNGN").classList.toggle("on", cur==="NGN"); $("tUSD").classList.toggle("on", cur==="USD");
+    var href = soldOut ? "https://wa.me/"+C.whatsapp : (cur==="NGN" ? C.checkoutNGN : C.checkoutUSD);
+    document.querySelectorAll("[data-cta]").forEach(function(a){
+      a.href = href; a.textContent = soldOut ? "Join the waitlist" : "Reserve my seat for "+p;
+    });
+    $("sticky").querySelector(".btn").textContent = soldOut ? "Waitlist" : "Reserve seat";
+  }
+  window.setCur = function(c){ cur = c; render(); };
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("[data-cta]");
+    if(a && window.fbq){ fbq('track','InitiateCheckout',{value: cur==="NGN"?C.priceNGN:C.priceUSD, currency: cur}); }
+  });
+  render();
+})();
+</script>
+</body>
+</html>
