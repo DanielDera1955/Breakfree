@@ -6,330 +6,527 @@
 <title>Make Money with ChatGPT and Facebook Ads | Live Training</title>
 <meta name="description" content="A live training on finding buyers, writing ads with ChatGPT and running Facebook and Instagram ads to work toward your first $1,000 in sales.">
 <meta property="og:title" content="Make Money with ChatGPT and Facebook Ads | Live Training">
-<meta property="og:description" content="A live training on finding buyers, writing ads with ChatGPT and running Facebook and Instagram ads to work toward your first $1,000 in sales.">
-<meta property="og:type" content="website">
+<meta property="og:description" content="A live training on finding buyers, writing ads with ChatGPT and running Facebook and Instagram ads.">
 <meta property="og:image" content="/og.jpg">
+<meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#14161a;--muted:#5b6370;--bg:#fbfaf7;--card:#fff;--line:#e8e4da;--accent:#0b6b4f;--accent2:#0a5640;--warn:#b4491c}
+:root{--blue:#216BE1;--blue-d:#1a56b8;--yellow:#FFF000;--navy:#0B2A5B;--ink:#0B2A5B;--muted:#4a5f85;--soft:#EAF0FC;--line:#d6e0f5;--card:#F4F7FE}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
-.wrap{max-width:720px;margin:0 auto;padding:0 20px}
-section{padding:44px 0;border-bottom:1px solid var(--line)}
-h1{font-size:clamp(28px,6vw,42px);line-height:1.15;margin:12px 0 14px}
-h2{font-size:clamp(23px,4.5vw,30px);line-height:1.25;margin:0 0 16px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:17px;overflow-x:hidden}
+h1,h2,h3,.num,.price,.stat{font-family:"Plus Jakarta Sans",Inter,system-ui,sans-serif;font-weight:800;letter-spacing:-.02em}
+.wrap{max-width:620px;margin:0 auto;padding:0 22px}
+.wide{max-width:980px}
+section{padding:52px 0}
+.center{text-align:center}
 p{margin:0 0 14px}
-.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
-.sub{font-size:19px;color:var(--muted)}
-.btn{display:block;width:100%;text-align:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:16px 20px;border-radius:12px;font-size:18px;border:0;cursor:pointer}
-.btn:hover{background:var(--accent2)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-.price-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:6px 0 4px}
-.price{font-size:40px;font-weight:800}
-.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-bottom:12px;background:#fff}
-.toggle button{border:0;background:none;padding:8px 16px;font-size:14px;cursor:pointer;font-weight:600;color:var(--muted)}
-.toggle button.on{background:var(--ink);color:#fff}
-.seats{color:var(--warn);font-weight:700;font-size:15px}
-ul.clean{padding-left:0;list-style:none;margin:0}
-ul.clean li{padding:8px 0 8px 30px;position:relative}
-ul.yes li:before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:800}
-ul.no li:before{content:"\2717";position:absolute;left:0;color:var(--warn);font-weight:800}
-.grid{display:grid;grid-template-columns:1fr;gap:14px}
-@media(min-width:600px){.grid.two{grid-template-columns:1fr 1fr}}
-.shots img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
-.mod{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
-.mod:first-child{border-top:0}
-.mod b.n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:15px}
-details{border-top:1px solid var(--line);padding:14px 0}
-summary{cursor:pointer;font-weight:700}
-.video{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000;margin-top:18px}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.note{font-size:13.5px;color:var(--muted)}
-footer{padding:30px 0 110px;font-size:14px;color:var(--muted)}
-footer a{color:var(--muted)}
-.sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:12px;align-items:center;z-index:9}
-.sticky .t{flex:1;font-size:14px;line-height:1.3}
-.sticky .btn{width:auto;padding:12px 18px;font-size:16px}
+h1{font-size:clamp(28px,7.4vw,50px);line-height:1.1;text-transform:uppercase;margin:14px 0 18px}
+h2{font-size:clamp(25px,6vw,38px);line-height:1.15;margin:0 0 18px}
+.up{text-transform:uppercase}
+.hl{background:linear-gradient(transparent 55%,var(--yellow) 55%,var(--yellow) 94%,transparent 94%);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.bl{color:var(--blue)}
+.pill{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:800;font-size:12px;letter-spacing:.09em;text-transform:uppercase;padding:7px 14px;border-radius:999px;font-family:"Plus Jakarta Sans",Inter,sans-serif}
+.sub{color:var(--muted);font-size:18px}
+
+/* ribbon */
+.ribbon-wrap{position:relative;height:74px;overflow:hidden;background:transparent}
+.ribbon-wrap:before{content:"";position:absolute;left:-5%;right:-5%;top:6px;height:34px;background:var(--yellow);transform:rotate(1.6deg)}
+.ribbon{position:absolute;left:-5%;right:-5%;top:0;height:44px;background:var(--blue);transform:rotate(-1.3deg);overflow:hidden;display:flex;align-items:center;box-shadow:0 6px 14px rgba(11,42,91,.2)}
+.track{display:flex;white-space:nowrap;animation:slide 26s linear infinite;will-change:transform}
+.track span{color:#fff;font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:0 18px;font-family:"Plus Jakarta Sans",Inter,sans-serif}
+.track span b{color:var(--yellow)}
+.track i{color:var(--yellow);font-style:normal;padding:0 6px}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
+
+/* hero */
+.hero{background:linear-gradient(135deg,#e8f0d8 0%,#d3e2fb 45%,#e4ecfc 100%);padding:30px 0 60px}
+.hero .small{color:var(--blue);font-weight:600;margin:16px 0 0}
+.watch{font-weight:700;margin:26px 0 14px}
+
+/* video */
+.video{position:relative;max-width:560px;margin:0 auto;border-radius:20px;border:4px solid #fff;background:#111;box-shadow:10px 10px 0 var(--yellow),0 22px 40px rgba(11,42,91,.22);overflow:hidden;aspect-ratio:16/9;cursor:pointer}
+.video img,.video iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.video .ph{position:absolute;inset:0;background:linear-gradient(160deg,#1c2b4a,#0B2A5B);display:grid;place-items:center;color:#9db4e0;font-size:14px;text-align:center;padding:20px}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:78px;height:78px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.play:after{content:"";margin-left:6px;border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent var(--navy)}
+
+/* CTA */
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--yellow);color:var(--navy);text-decoration:none;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:16px;padding:18px 28px;border-radius:14px;border:0;cursor:pointer;box-shadow:0 0 0 4px rgba(33,107,225,.28),0 12px 24px rgba(11,42,91,.2);transition:transform .15s,box-shadow .15s;text-align:center;max-width:100%}
+.cta:hover{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(33,107,225,.4),0 16px 28px rgba(11,42,91,.26)}
+.cta:after{content:"\2192";font-size:22px;line-height:1}
+.cta-row{margin-top:30px;text-align:center}
+.cta.full{display:flex;width:100%}
+
+/* resolution */
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0 10px}
+.q{background:var(--yellow);border-radius:6px 6px 26px 6px;padding:14px 16px 20px;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;font-size:18px;line-height:1.25;box-shadow:0 10px 22px rgba(11,42,91,.1);position:relative}
+.q:before{content:"\201C";display:block;color:var(--blue);font-size:38px;line-height:.8;margin-bottom:4px}
+.timeline{display:flex;align-items:center;justify-content:center;gap:0;margin:36px 0 18px;flex-wrap:nowrap}
+.timeline span{background:var(--soft);color:var(--blue);font-weight:700;font-size:13px;padding:7px 15px;border-radius:999px}
+.timeline span.now{background:var(--blue);color:#fff}
+.timeline em{width:22px;height:2px;background:#bfd0f1;display:block}
+
+/* numbered list */
+.nlist{margin-top:20px}
+.nrow{display:flex;gap:22px;align-items:flex-start;padding:22px 0;border-top:1px solid var(--line)}
+.nrow:last-child{border-bottom:1px solid var(--line)}
+.nrow .num{flex:0 0 58px;font-size:66px;line-height:.9;color:var(--blue);position:relative}
+.nrow .num:after{content:"";position:absolute;left:2px;bottom:-6px;width:38px;height:9px;border-radius:9px;background:var(--yellow);z-index:-1}
+.nrow p{margin:2px 0 0;font-size:17px}
+.nrow.short p{font-weight:700;font-size:18px}
+
+/* blue sections */
+.bluesec{background:var(--blue);color:#fff}
+.bluesec h2{color:#fff}
+.bluesec .rule{border:0;border-top:1px solid rgba(255,255,255,.35);margin:36px 0}
+.bluesec .lead{font-weight:700;font-size:18px}
+.bluesec .big{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;font-size:clamp(21px,4.6vw,27px);line-height:1.3;margin:14px 0 16px}
+
+/* results */
+.softsec{background:var(--soft)}
+.results{display:grid;gap:20px;margin-top:28px}
+@media(min-width:760px){.results{grid-template-columns:1fr 1fr 1fr}}
+.rcard{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 14px 30px rgba(11,42,91,.12);border:1px solid var(--line)}
+.rcard img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:top;background:#dfe7f7}
+.rcard .meta{padding:16px 18px 20px}
+.rcard .tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.rcard .amt{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;font-size:36px;line-height:1.1;color:var(--navy);margin:2px 0 4px}
+.rcard .cap{font-size:14.5px;color:var(--muted);margin:0}
+
+/* why heading with rule */
+.whyhead{display:flex;align-items:center;gap:14px;margin:30px 0 4px}
+.whyhead h3{font-size:34px;margin:0}
+.whyhead hr{flex:1;border:0;height:5px;background:var(--yellow);border-radius:5px;margin:0}
+.subhead{color:var(--blue);font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;font-size:24px;line-height:1.25;margin:22px 0 10px}
+
+/* callout */
+.callout{background:var(--blue);color:#fff;border-radius:26px;padding:34px 30px;margin:10px 0 34px}
+.callout h3{font-size:clamp(22px,5vw,30px);text-transform:uppercase;margin:0 0 18px;display:inline-block;border-bottom:7px solid var(--yellow);padding-bottom:4px;line-height:1.15}
+.callout p{color:#eaf1ff}
+
+/* intro */
+.intro .title{font-size:clamp(28px,6.4vw,44px);text-align:center;line-height:1.12;margin:0 0 26px}
+.portrait{max-width:380px;margin:0 auto;border-radius:22px;overflow:hidden;position:relative;background:linear-gradient(160deg,#cfdcf6,#9db8ea);aspect-ratio:4/5;box-shadow:10px 10px 0 var(--yellow)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .ph{position:absolute;inset:0;display:grid;place-items:center;color:#3b5aa0;font-size:14px;text-align:center;padding:20px}
+.badge{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(11,42,91,.92);color:#fff;border-radius:12px;padding:10px 14px;font-size:13px;line-height:1.35}
+.badge b{display:block;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-size:17px}
+
+/* modules */
+.mods{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px}
+@media(min-width:700px){.mods{grid-template-columns:1fr 1fr}}
+.mod{background:var(--card);border:1px solid #dfe7f8;border-radius:22px;padding:22px 22px 24px;display:flex;gap:18px}
+.mod .c{flex:0 0 46px;display:flex;flex-direction:column;align-items:center}
+.mod .c b{width:46px;height:46px;border-radius:50%;border:3px solid var(--blue);color:var(--blue);display:grid;place-items:center;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;font-size:19px;background:#fff}
+.mod .c i{flex:1;width:3px;margin-top:8px;background:linear-gradient(var(--blue),rgba(33,107,225,0));border-radius:3px;min-height:34px}
+.mod h3{font-size:19px;line-height:1.25;margin:0 0 6px;letter-spacing:-.01em}
+.mod p{margin:0;font-size:15.5px;color:var(--muted)}
+.underbar{width:64px;height:5px;border-radius:5px;background:linear-gradient(90deg,var(--blue) 70%,var(--yellow) 70%);margin:6px auto 0;border:0}
+
+/* proof */
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.proof figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.proof img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.proof figcaption{padding:10px 12px;font-weight:800;font-family:"Plus Jakarta Sans",Inter,sans-serif;color:var(--blue);font-size:17px;text-align:center}
+.statbox{text-align:center;padding:46px 0}
+.stat{font-size:clamp(64px,18vw,110px);line-height:1;color:var(--blue)}
+.pills3{display:grid;gap:12px;margin:22px 0}
+.pills3 div{background:var(--soft);border-radius:14px;padding:14px 18px 14px 50px;font-weight:700;position:relative}
+.pills3 div:before{content:"\2713";position:absolute;left:16px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:13px}
+
+/* for / not for */
+.two{display:grid;gap:16px}
+@media(min-width:700px){.two{grid-template-columns:1fr 1fr}}
+.fcard{border-radius:20px;padding:26px 24px;border:1px solid var(--line);background:#fff}
+.fcard.yes{background:var(--card)}
+.fcard h3{font-size:21px;margin:0 0 12px}
+.fcard ul{list-style:none;margin:0;padding:0}
+.fcard li{position:relative;padding:8px 0 8px 32px;font-size:16px}
+.fcard li:before{position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;color:#fff}
+.fcard.yes li:before{content:"\2713";background:var(--blue)}
+.fcard.no li:before{content:"\2715";background:#d6452d}
+
+/* price */
+.pricesec{background:linear-gradient(180deg,#fff,var(--soft))}
+.pricecard{background:#fff;border:2px solid var(--blue);border-radius:26px;padding:30px 26px;box-shadow:0 20px 44px rgba(33,107,225,.18);text-align:center;max-width:460px;margin:26px auto 0}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff;margin-bottom:12px}
+.toggle button{border:0;background:none;padding:9px 18px;font-weight:700;font-size:14px;color:var(--muted);cursor:pointer;font-family:inherit}
+.toggle button.on{background:var(--navy);color:#fff}
+.price{font-size:clamp(54px,14vw,74px);line-height:1;color:var(--navy)}
+.was{color:var(--muted);text-decoration:line-through;font-size:20px;margin-left:8px}
+.seats{color:#c2410c;font-weight:800;font-size:15px;margin:8px 0 18px}
+.incl{list-style:none;margin:16px 0 22px;padding:0;text-align:left}
+.incl li{padding:9px 0 9px 32px;position:relative;border-top:1px solid var(--line);font-size:15.5px}
+.incl li:before{content:"\2713";position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800}
+.note{font-size:13.5px;color:var(--muted);margin:12px 0 0}
+
+/* final */
+.final{background:var(--navy);color:#fff}
+.final h2{color:#fff}
+.final .bul{list-style:none;padding:0;margin:20px 0 6px}
+.final .bul li{padding:12px 0 12px 36px;position:relative;border-top:1px solid rgba(255,255,255,.18)}
+.final .bul li:before{content:"";position:absolute;left:4px;top:19px;width:12px;height:12px;background:var(--yellow);transform:rotate(45deg)}
+
+details{border-top:1px solid var(--line);padding:16px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--blue);font-size:22px;line-height:1}
+details[open] summary:after{content:"\2212"}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{background:#071a3a;color:#9bb0d8;padding:34px 0 120px;font-size:14px;text-align:center}
+footer a{color:#cfe0ff}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(11,42,91,.12);padding:10px 14px;display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .25s}
+.sticky.show{transform:none}
+.sticky .t{flex:1;line-height:1.25}
+.sticky .t b{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-size:20px}
+.sticky .t span{display:block;font-size:12.5px;color:#c2410c;font-weight:700}
+.sticky .cta{padding:13px 18px;font-size:14px;box-shadow:0 0 0 3px rgba(33,107,225,.25)}
 .hide{display:none!important}
+.todo{background:#fff3b0;color:#0B2A5B!important;outline:1px dashed #b58900;padding:2px 6px;border-radius:4px}
 </style>
 </head>
 <body>
 
-<!--
-=====================================================
- EDIT ONLY THE CONFIG BLOCK AT THE BOTTOM OF THIS FILE
- (search for: const CONFIG)
-=====================================================
--->
+<div class="ribbon-wrap" aria-hidden="true"><div class="ribbon"><div class="track" id="track"></div></div></div>
 
-<main>
-<section id="top">
+<header class="hero">
+  <div class="wrap center">
+    <span class="pill">Live training &middot; Online</span>
+    <p class="small">In this live training, I will teach you ...</p>
+    <h1>How to find buyers and get your first <span class="hl">$1,000</span> in sales using <span class="bl">ChatGPT</span> and <span class="bl">Facebook Ads</span></h1>
+    <p class="sub">You don't need to be a tech expert. You don't need a shop. You don't need thousands of followers. You need a clear offer, the right audience and a method you can follow.</p>
+    <p class="watch">Watch this video to the end to see how</p>
+    <div class="video" id="video" role="button" aria-label="Play video">
+      <img id="poster" class="hide" alt="">
+      <div class="ph" id="vph">Add your video poster image (img/poster.jpg) and YouTube link in CONFIG</div>
+      <div class="play"></div>
+    </div>
+    <div class="cta-row"><a class="cta" data-cta href="#">Show me how to get started</a></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap center">
+    <span class="pill">Let's be honest for a second</span>
+    <h2 class="up" style="margin-top:16px">Do you remember what you promised yourself on <span class="hl">January 1?</span></h2>
+    <p class="sub">The new year plans you wrote down, and the promises you made to yourself:</p>
+    <div class="quotes">
+      <div class="q">This year, my income must grow.</div>
+      <div class="q">This year, I will start that business.</div>
+      <div class="q">This year, I will stop depending on others.</div>
+      <div class="q">This year, things must change.</div>
+    </div>
+    <div class="timeline"><span>Jan</span><em></em><span>Feb</span><em></em><span>Mar</span><em></em><span class="now" id="nowMonth">Nov</span></div>
+    <p>The months moved fast, and now we are close to the end of the year.</p>
+    <h3 style="font-size:22px;line-height:1.3;margin:6px 0 0">You started the year with big plans, but things did not go the way you expected.</h3>
+  </div>
   <div class="wrap">
-    <div class="eyebrow" data-t="eyebrow"></div>
-    <h1 data-t="headline"></h1>
-    <p class="sub" data-t="subhead"></p>
-
-    <div id="videoBox" class="video hide"><iframe id="vid" allowfullscreen loading="lazy"></iframe></div>
-
-    <div class="card" style="margin-top:22px">
-      <div class="toggle" role="tablist" aria-label="Currency">
-        <button id="tNGN" class="on" onclick="setCur('NGN')">Pay in Naira</button>
-        <button id="tUSD" onclick="setCur('USD')">Pay in USD</button>
-      </div>
-      <div class="price-row"><span class="price" id="price1"></span></div>
-      <p class="seats" id="seats1"></p>
-      <a class="btn" id="cta1" href="#" data-cta>Reserve my seat</a>
-      <p class="note" style="margin:10px 0 0" data-t="payNote"></p>
+    <div class="nlist">
+      <div class="nrow"><div class="num">1</div><p>You have not made the money you hoped to make, and a steady income still feels out of reach.</p></div>
+      <div class="nrow"><div class="num">2</div><p>Bills, rent and family needs keep showing up, and you are tired of stretching every naira.</p></div>
+      <div class="nrow"><div class="num">3</div><p>You have tried different businesses or courses that did not work for you, and you are careful about trusting another one.</p></div>
+      <div class="nrow"><div class="num">4</div><p>You want to take care of the people who depend on you without worrying about money every month.</p></div>
+      <div class="nrow"><div class="num">5</div><p>You see people your age posting their progress online, and you wonder what they know that you do not.</p></div>
+      <div class="nrow"><div class="num">6</div><p>You have worked hard and prayed hard, and you are looking for a practical skill that can finally move things forward.</p></div>
     </div>
   </div>
 </section>
 
-<section>
+<section class="bluesec">
   <div class="wrap">
-    <h2>Let's be honest</h2>
-    <ul class="clean no" id="pains"></ul>
+    <span class="pill">My story</span>
+    <h2 style="margin-top:16px">I know how it feels because I was once like you.</h2>
+    <p class="lead todo">REPLACE: One honest line about where the trainer started, e.g. "Stuck, broke and unsure what to do next."</p>
+    <p class="todo">REPLACE: Two or three true sentences. How she found ChatGPT and Facebook Ads, and what changed. Only claims she can show proof for.</p>
+    <p>Now I want to go live with you and teach you the same method step by step.</p>
+    <hr class="rule">
+    <span class="pill">My promise</span>
+    <p class="big">I can't promise you a specific amount of money. What I promise is a clear method, a real plan and honest answers to your questions.</p>
+    <p>If you attend the live training and follow the steps, you will know how to build an offer, reach the right buyers and test ads with a budget you control. What you earn depends on your product, your effort and your testing.</p>
+  </div>
+</section>
+
+<section class="softsec" id="resultsSec">
+  <div class="wrap wide center">
+    <span class="pill">Real people. Real results.</span>
+    <h2 style="margin-top:16px">Take a look at my <span class="hl">students' results</span></h2>
+    <div class="results" id="results"></div>
+    <p class="note">Results vary. These are messages from past students and depend on each person's product, effort and market.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2 data-t="storyTitle"></h2>
-    <div id="story"></div>
+    <span class="pill">The bigger picture</span>
+    <h2 style="margin-top:16px">Why am I sharing all this <span class="hl">with you?</span></h2>
+    <p>I am sharing this so you know the method works for people who put in the effort, whatever their age or background.</p>
+    <p>In my introductory video, you saw how ChatGPT can help you research ideas, organize information and shape a simple digital product that you could sell as a low-priced offer.</p>
+    <div class="subhead">But creating a product is only one part of the business.</div>
+    <p>You could design a beautiful PDF, post it on WhatsApp and Facebook, and still get no sales.</p>
+    <div class="whyhead"><h3>Why?</h3><hr></div>
+    <div class="nlist" style="margin-top:0">
+      <div class="nrow short"><div class="num">1</div><p>The right people may not be seeing it.</p></div>
+      <div class="nrow short"><div class="num">2</div><p>Your offer may not be clear enough.</p></div>
+      <div class="nrow short"><div class="num">3</div><p>Or your sales message may need work.</p></div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:36px">
+    <div class="callout">
+      <h3>That's where marketing comes in.</h3>
+      <p>Facebook and Instagram ads can help you reach people beyond your contacts and followers, and test how they respond to your offer.</p>
+      <p style="margin:0">You don't need 100,000 followers. You need to learn how to reach the right audience, explain your value clearly and guide interested people to a purchase.</p>
+    </div>
+    <div class="cta-row" style="margin-top:0"><a class="cta" data-cta href="#">Join the training now</a></div>
   </div>
 </section>
 
-<section id="proofSec">
+<section class="softsec intro">
   <div class="wrap">
-    <h2>What students say</h2>
-    <div class="grid two shots" id="shots"></div>
-    <p class="note" style="margin-top:14px">Results vary. These are messages from past students and depend on each person's effort, offer and market.</p>
+    <h2 class="title">Introducing the<br><span class="hl">Live Ads Training</span></h2>
+    <div class="portrait">
+      <img id="portrait" class="hide" alt="Your trainer">
+      <div class="ph" id="pph">Add trainer photo (img/trainer.jpg)</div>
+      <div class="badge"><b id="hostName">REPLACE Trainer Name</b><span id="hostRole">REPLACE role, e.g. Digital advertising trainer</span></div>
+    </div>
+    <p class="center todo" style="margin-top:26px">REPLACE: One or two sentences on what the trainer will show you in this live training and the result students work toward.</p>
+    <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <h2 data-t="whyTitle"></h2>
-    <div id="why"></div>
+  <div class="wrap center">
+    <h2>I want to show you how the <span class="hl">advertising side</span> of this business really works.</h2>
+    <p class="sub">Not just motivation. Not just screenshots. Not just being told to go and make money.</p>
+    <p class="sub">I will explain the process, the strategy, the setup, the decisions, the mistakes to avoid and the numbers you should understand before spending money on campaigns.</p>
+    <h2 style="margin-top:46px">Here's exactly what I'll teach you <span class="hl">inside the live training</span></h2>
+    <hr class="underbar">
+  </div>
+  <div class="wrap wide">
+    <div class="mods" id="mods"></div>
+    <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <h2>What you will learn</h2>
-    <div id="mods"></div>
+<section class="softsec" id="proofSec">
+  <div class="wrap wide center">
+    <span class="pill">Fair question</span>
+    <h2 style="margin-top:16px" id="trustHead">"How do I know this is not another scam, and why should I trust you?"</h2>
+    <p class="sub" style="max-width:560px;margin:0 auto">Good question. You should ask it. Here is proof of the work behind this training.</p>
+    <div class="proof" id="proof"></div>
+    <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
   </div>
 </section>
 
-<section>
+<section class="statbox" id="statSec">
+  <div class="wrap center">
+    <div class="stat" id="statVal">0</div>
+    <p class="sub" id="statCap" style="max-width:420px;margin:8px auto 0"></p>
+  </div>
+</section>
+
+<section style="padding-top:10px">
   <div class="wrap">
-    <div class="grid two">
-      <div class="card"><h2 style="font-size:21px">This is for you if</h2><ul class="clean yes" id="forYes"></ul></div>
-      <div class="card"><h2 style="font-size:21px">Not for you if</h2><ul class="clean no" id="forNo"></ul></div>
+    <h2 class="center">This is <span class="bl">not</span> one of those trainings where I sell to you at the end.</h2>
+    <p class="center sub">The live training is built to teach, not to pressure you into a bigger purchase.</p>
+    <div class="pills3">
+      <div>No hidden upsell inside the training</div>
+      <div>You can ask questions and get honest answers</div>
+      <div>You leave with a plan you can start on</div>
+    </div>
+    <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
+  </div>
+</section>
+
+<section class="softsec">
+  <div class="wrap wide">
+    <h2 class="center">Let's be honest about who this is for</h2>
+    <div class="two" style="margin-top:26px">
+      <div class="fcard yes"><h3>This training is for you if</h3>
+        <ul><li>You sell, or want to sell, a product or service online.</li><li>You are ready to follow the steps and do the work.</li><li>You can set aside a small budget to test ads.</li><li>You want a clear method, not hype.</li></ul></div>
+      <div class="fcard no"><h3>This training is NOT for you if</h3>
+        <ul><li>You want money with no effort.</li><li>You expect results without testing or fixing mistakes.</li><li>You are not willing to spend anything on ads.</li><li>You will not attend or watch the training.</li></ul></div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <h2 data-t="hostTitleH"></h2>
-    <div id="host"></div>
-  </div>
-</section>
-
-<section id="join">
-  <div class="wrap">
-    <h2>Join the training</h2>
-    <div class="card">
-      <ul class="clean yes" id="includes"></ul>
-      <div class="price-row" style="margin-top:14px"><span class="price" id="price2"></span></div>
-      <p class="seats" id="seats2"></p>
-      <a class="btn" id="cta2" href="#" data-cta>Reserve my seat</a>
-      <p class="note" style="margin:10px 0 0" data-t="refundNote"></p>
+<section class="pricesec" id="join">
+  <div class="wrap center">
+    <h2>Now here's something I really want you to understand</h2>
+    <p class="sub">Most people do not fail because they are not smart. They fail because nobody walked them through the process. This training does that, live, with room for your questions.</p>
+    <div class="pricecard">
+      <div class="toggle"><button id="tNGN" class="on" onclick="setCur('NGN')">Pay in Naira</button><button id="tUSD" onclick="setCur('USD')">Pay in USD</button></div>
+      <div><span class="price" id="price"></span><span class="was hide" id="was"></span></div>
+      <div class="seats" id="seats"></div>
+      <ul class="incl" id="incl"></ul>
+      <a class="cta full" data-cta href="#">Join the training now</a>
+      <p class="note" id="refund"></p>
     </div>
   </div>
 </section>
 
-<section>
+<section class="final">
   <div class="wrap">
-    <h2>Questions</h2>
-    <div id="faq"></div>
-    <p style="margin-top:18px">Still unsure? <a id="wa" href="#" target="_blank" rel="noopener">Message us on WhatsApp</a>.</p>
+    <h2>The year is almost over. But your chance to learn something new isn't.</h2>
+    <p>A year from now you will wish you had started today. One decision is all it takes to begin.</p>
+    <ul class="bul">
+      <li>Learn how to reach buyers with ads instead of waiting for them to find you.</li>
+      <li>Get a plan you can test with a small budget.</li>
+      <li>Seats are limited, so we can answer your questions properly.</li>
+    </ul>
+    <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
   </div>
 </section>
-</main>
+
+<section>
+  <div class="wrap">
+    <h2 class="center">Questions</h2>
+    <div id="faq" style="margin-top:20px"></div>
+    <p style="margin-top:22px" class="center">Still unsure? <a id="wa" href="#" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700">Message us on WhatsApp</a></p>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
-    <p data-t="footerBrand"></p>
+    <p id="footBrand"></p>
     <p><a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms.html">Terms of Service</a></p>
   </div>
 </footer>
 
 <div class="sticky" id="sticky">
-  <div class="t"><b id="stickyPrice"></b><br><span id="stickySeats" class="seats" style="font-size:13px"></span></div>
-  <a class="btn" href="#" data-cta>Reserve my seat</a>
+  <div class="t"><b id="sPrice"></b><span id="sSeats"></span></div>
+  <a class="cta" data-cta href="#">Join now</a>
 </div>
 
 <script>
 /* ==================== EDIT THIS BLOCK ==================== */
-const CONFIG = {
+var CONFIG = {
   brand: "REPLACE Brand Name",
-  eyebrow: "Live online training | REPLACE date and time (WAT)",
-  headline: "Learn to sell with ChatGPT and Facebook Ads, even if you have never run an ad before",
-  subhead: "A live, practical training that shows you how to find buyers, write ads with ChatGPT, launch on Facebook and Instagram, and work toward your first $1,000 in sales.",
-
-  // Pricing
+  marquee: "Live training",            // text in the top ribbon
+  marqueeHighlight: "Limited seats",
   priceNGN: 15000,
   priceUSD: 12,
+  originalPriceNGN: 0,                  // set only if the client really sold at a higher price before, else leave 0
+  originalPriceUSD: 0,
   checkoutNGN: "https://selar.com/REPLACE-NGN-LINK",
   checkoutUSD: "https://selar.com/REPLACE-USD-LINK",
-
-  // Seats: update seatsTaken by hand after each confirmed sale
   seatCap: 20,
   seatsTaken: 0,
-
   whatsapp: "234XXXXXXXXXX",
-  videoEmbed: "",
+  videoEmbed: "",                       // e.g. https://www.youtube.com/embed/VIDEO_ID
+  videoPoster: "img/poster.jpg",        // optional poster image
+  trainerPhoto: "img/trainer.jpg",      // optional portrait
+  hostName: "REPLACE Trainer Name",
+  hostRole: "REPLACE role, e.g. Digital advertising trainer",
   pixelId: "",
-
-  payNote: "Secure checkout. You get access details right after payment.",
-  refundNote: "REPLACE: Refund policy in one line, e.g. Attend the full training, and if you feel it was not worth it, message us within 48 hours for a refund.",
-
-  pains: [
-    "You have spent money on ads or courses and still do not know what went wrong.",
-    "You post every day, but people like your content and do not buy.",
-    "You hear about people making sales online and wonder what they know that you do not.",
-    "You have a product or service, but no steady way to get buyers to it."
-  ],
-
-  storyTitle: "Why this training exists",
-  story: [
-    "REPLACE: Two or three true sentences from the trainer. What she struggled with before ads worked, and what changed.",
-    "REPLACE: What she has since done with ads for her own business or clients. Only include numbers she can show proof of."
-  ],
-
-  whyTitle: "Why most people lose money on ads",
-  why: [
-    { h: "They advertise before they know the buyer.", p: "Ads aimed at everyone reach no one. When you know exactly who needs your offer, the same budget goes much further." },
-    { h: "Their offer is not clear.", p: "If a stranger cannot tell what you sell and why it matters in a few seconds, they scroll past, no matter how good the ad looks." },
-    { h: "They guess instead of testing.", p: "Winning ads come from small, tracked tests with a fixed budget. Most beginners spend big on one ad and give up when it fails." }
-  ],
-
-  modules: [
-    { h: "Position your product so people understand it fast", p: "Write a clear offer that says who it is for and why they should care." },
-    { h: "Research your audience with ChatGPT", p: "Use simple prompts to learn what your buyers want, fear and search for." },
-    { h: "Set up your Facebook and Instagram ad account", p: "Business account, pixel and campaign structure, done step by step." },
-    { h: "Write ad copy and plan creatives with ChatGPT", p: "Turn your research into hooks, captions and ad ideas you can use right away." },
-    { h: "Build a simple sales path", p: "Connect your ad to a page, WhatsApp or checkout so interest turns into orders." },
-    { h: "Test with a small budget and track results", p: "Know what to measure, what to cut and what to scale." },
-    { h: "Your plan toward your first $1,000 in sales", p: "Work out how many sales you need and map the steps to get there." }
-  ],
-
-  testimonials: ["t1.jpg", "t2.jpg", "t3.jpg", "t4.jpg", "t5.jpg", "t6.jpg"],
-
-  forYes: [
-    "You sell a product or service, or want to start selling online.",
-    "You are ready to follow the steps and put in the work.",
-    "You can set aside a small ad budget to test with."
-  ],
-  forNo: [
-    "You want money with no effort or no work on your offer.",
-    "You expect results without testing or fixing things that fail.",
-    "You are not ready to spend any money on ads."
-  ],
-
-  hostTitleH: "Meet your trainer",
-  host: [
-    "REPLACE: Trainer name and role. One short paragraph on her experience with ads, such as years of practice, types of clients and how many people she has trained. Only claims she can back up."
-  ],
-
+  stat: { value: "", caption: "" },     // e.g. value "1,000+", caption "people trained". Leave value empty to hide
+  refund: "REPLACE: Refund policy in one line.",
   includes: [
     "Live training session (REPLACE date, platform and length)",
     "REPLACE: Replay access and for how long",
     "REPLACE: Any bonus, template or community access"
   ],
-
-  faq: [
-    { q: "Do I need experience with ads?", a: "No. The training starts from the basics and walks you through each step." },
-    { q: "Do I need a big budget?", a: "No. You will learn to test with a small budget first. You decide how much you are comfortable spending." },
-    { q: "Is a result guaranteed?", a: "No. Results depend on your product, your offer, your effort and your testing. The training gives you the method and the plan." },
-    { q: "When and where is the training?", a: "REPLACE: Date, time (WAT) and platform." },
-    { q: "Will there be a replay?", a: "REPLACE: Yes or no, and for how long." },
-    { q: "Can I pay from outside Nigeria?", a: "Yes. Switch to Pay in USD above and use the USD checkout." },
-    { q: "What if I have a payment problem?", a: "Message us on WhatsApp with your name and payment receipt and we will sort it out." }
+  // Student results: images in /testimonials. Fill amount and note only with what the screenshot really shows.
+  results: [
+    // { img: "t1.jpg", tag: "Revenue", amount: "REPLACE", note: "REPLACE one line about this result" }
   ],
-
-  footerBrand: "REPLACE Brand Name. All rights reserved."
+  // Payment proof: images in /proof with a label under each
+  proof: [
+    // { img: "p1.jpg", label: "REPLACE" }
+  ],
+  modules: [
+    ["Turn your product into an offer people understand", "Position your product, spot its benefits and explain the problem it solves."],
+    ["Find your buyers on Facebook and Instagram", "Research and identify the audiences most likely to want what you sell."],
+    ["Create ads, even as a beginner", "The essential steps to set up and launch your first advertising campaign."],
+    ["Write ad copy that gets attention", "Headlines, offers and calls to action that move people to the next step."],
+    ["Use ChatGPT to speed up research and writing", "Prompts for audience research, hooks, captions and ad ideas."],
+    ["Create ad videos and images", "Present your product clearly and communicate its value visually."],
+    ["Guide people from ad to payment page", "The basic funnel: how a stranger becomes a paying customer."],
+    ["Test with a small budget and track results", "What to measure, what to cut and what to scale."]
+  ],
+  faq: [
+    ["Do I need experience with ads?", "No. The training starts from the basics and walks you through each step."],
+    ["Do I need a big budget?", "No. You will learn to test with a small budget first. You decide how much you are comfortable spending."],
+    ["Is a result guaranteed?", "No. Results depend on your product, offer, effort and testing. The training gives you the method and the plan."],
+    ["When and where is the training?", "REPLACE: Date, time (WAT) and platform."],
+    ["Will there be a replay?", "REPLACE: Yes or no, and for how long."],
+    ["Can I pay from outside Nigeria?", "Yes. Switch to Pay in USD in the price box and use the USD checkout."],
+    ["What if I have a payment problem?", "Message us on WhatsApp with your name and payment receipt and we will sort it out."]
+  ]
 };
 /* ================== END CONFIG ================== */
 
 (function(){
-  var C = CONFIG, cur = "NGN";
-  var $ = function(id){return document.getElementById(id)};
-  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  var C=CONFIG, cur="NGN";
+  var $=function(i){return document.getElementById(i)};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  try{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||"",lg=(navigator.language||"").toLowerCase();if(tz!=="Africa/Lagos"&&lg.indexOf("ng")===-1)cur="USD"}catch(e){}
 
-  // Auto-detect Nigeria for default currency
-  try{
-    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-    var lang = (navigator.language||"").toLowerCase();
-    if(tz !== "Africa/Lagos" && lang.indexOf("ng") === -1) cur = "USD";
-  }catch(e){}
+  // ribbon
+  var unit='<span>'+esc(C.marquee)+' <b>'+esc(C.marqueeHighlight)+'</b></span><i>&#9670;</i>';
+  var r='';for(var i=0;i<14;i++)r+=unit;$("track").innerHTML=r;
+  // month pill
+  var ms=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];$("nowMonth").textContent=ms[new Date().getMonth()];
 
-  document.querySelectorAll("[data-t]").forEach(function(el){
-    var k = el.getAttribute("data-t"); if(C[k] !== undefined) el.textContent = C[k];
+  $("hostName").textContent=C.hostName;$("hostRole").textContent=C.hostRole;$("footBrand").textContent=C.brand+". All rights reserved.";
+  $("wa").href="https://wa.me/"+C.whatsapp;$("refund").textContent=C.refund;
+
+  // images with graceful fallback
+  function tryImg(el,src,ph){var im=new Image();im.onload=function(){el.src=src;el.classList.remove("hide");if(ph)ph.classList.add("hide")};im.src=src}
+  tryImg($("poster"),C.videoPoster,$("vph"));tryImg($("portrait"),C.trainerPhoto,$("pph"));
+
+  // video
+  $("video").addEventListener("click",function(){
+    if(!C.videoEmbed)return;
+    this.innerHTML='<iframe src="'+C.videoEmbed+(C.videoEmbed.indexOf("?")>-1?"&":"?")+'autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
   });
 
-  function list(id, arr){ $(id).innerHTML = arr.map(function(x){return "<li>"+esc(x)+"</li>"}).join(""); }
-  list("pains", C.pains); list("forYes", C.forYes); list("forNo", C.forNo); list("includes", C.includes);
-  $("story").innerHTML = C.story.map(function(p){return "<p>"+esc(p)+"</p>"}).join("");
-  $("host").innerHTML = C.host.map(function(p){return "<p>"+esc(p)+"</p>"}).join("");
-  $("why").innerHTML = C.why.map(function(w){return "<p><b>"+esc(w.h)+"</b><br>"+esc(w.p)+"</p>"}).join("");
-  $("mods").innerHTML = C.modules.map(function(m,i){return '<div class="mod"><b class="n">'+(i+1)+'</b><div><b>'+esc(m.h)+'</b><br><span style="color:var(--muted)">'+esc(m.p)+'</span></div></div>'}).join("");
-  $("faq").innerHTML = C.faq.map(function(f){return "<details><summary>"+esc(f.q)+"</summary><p style='margin-top:10px'>"+esc(f.a)+"</p></details>"}).join("");
-
-  // Testimonials: hide any image that is missing, hide section if none load
-  var shots = $("shots"), loaded = 0, pending = C.testimonials.length;
-  if(!pending) $("proofSec").classList.add("hide");
-  C.testimonials.forEach(function(f){
-    var img = new Image(); img.loading = "lazy"; img.alt = "Student message";
-    img.onload = function(){ loaded++; shots.appendChild(img); done(); };
-    img.onerror = function(){ done(); };
-    img.src = "testimonials/" + f;
+  // results
+  var rs=$("results");
+  if(!C.results.length)$("resultsSec").classList.add("hide");
+  C.results.forEach(function(x){
+    rs.insertAdjacentHTML("beforeend",'<div class="rcard"><img src="testimonials/'+esc(x.img)+'" alt="Student result" loading="lazy"><div class="meta"><div class="tag">'+esc(x.tag||"")+'</div><div class="amt">'+esc(x.amount||"")+'</div><p class="cap">'+esc(x.note||"")+'</p></div></div>');
   });
-  function done(){ pending--; if(pending===0 && loaded===0) $("proofSec").classList.add("hide"); }
+  // proof
+  var pf=$("proof");
+  if(!C.proof.length)$("proofSec").classList.add("hide");
+  C.proof.forEach(function(x){pf.insertAdjacentHTML("beforeend",'<figure><img src="proof/'+esc(x.img)+'" alt="Proof" loading="lazy"><figcaption>'+esc(x.label||"")+'</figcaption></figure>')});
+  // stat
+  if(!C.stat.value)$("statSec").classList.add("hide");else{$("statVal").textContent=C.stat.value;$("statCap").textContent=C.stat.caption}
+  // modules
+  $("mods").innerHTML=C.modules.map(function(m,i){return '<div class="mod"><div class="c"><b>'+(i+1)+'</b><i></i></div><div><h3>'+esc(m[0])+'</h3><p>'+esc(m[1])+'</p></div></div>'}).join("");
+  $("incl").innerHTML=C.includes.map(function(x){return "<li>"+esc(x)+"</li>"}).join("");
+  $("faq").innerHTML=C.faq.map(function(f){return "<details><summary>"+esc(f[0])+"</summary><p>"+esc(f[1])+"</p></details>"}).join("");
 
-  if(C.videoEmbed){ $("vid").src = C.videoEmbed; $("videoBox").classList.remove("hide"); }
-  $("wa").href = "https://wa.me/" + C.whatsapp;
+  if(C.pixelId){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',C.pixelId);fbq('track','PageView')}
 
-  if(C.pixelId){
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', C.pixelId); fbq('track','PageView');
-  }
-
-  function fmt(c){ return c==="NGN" ? "₦"+C.priceNGN.toLocaleString("en-NG") : "$"+C.priceUSD; }
-  function seatsText(){
-    var left = Math.max(0, C.seatCap - C.seatsTaken);
-    return left > 0 ? left+" of "+C.seatCap+" seats left" : "Sold out. Message us on WhatsApp to join the waitlist.";
-  }
+  function money(c,n){return c==="NGN"?"₦"+n.toLocaleString("en-NG"):"$"+n}
   function render(){
-    var p = fmt(cur), s = seatsText(), soldOut = (C.seatCap - C.seatsTaken) <= 0;
-    ["price1","price2"].forEach(function(i){$(i).textContent = p});
-    ["seats1","seats2","stickySeats"].forEach(function(i){$(i).textContent = s});
-    $("stickyPrice").textContent = p;
-    $("tNGN").classList.toggle("on", cur==="NGN"); $("tUSD").classList.toggle("on", cur==="USD");
-    var href = soldOut ? "https://wa.me/"+C.whatsapp : (cur==="NGN" ? C.checkoutNGN : C.checkoutUSD);
-    document.querySelectorAll("[data-cta]").forEach(function(a){
-      a.href = href; a.textContent = soldOut ? "Join the waitlist" : "Reserve my seat for "+p;
-    });
-    $("sticky").querySelector(".btn").textContent = soldOut ? "Waitlist" : "Reserve seat";
+    var p=cur==="NGN"?C.priceNGN:C.priceUSD, op=cur==="NGN"?C.originalPriceNGN:C.originalPriceUSD;
+    var left=Math.max(0,C.seatCap-C.seatsTaken), sold=left<=0;
+    $("price").textContent=money(cur,p);
+    $("was").textContent=op?money(cur,op):"";$("was").classList.toggle("hide",!op);
+    var st=sold?"Sold out. Message us to join the waitlist.":left+" of "+C.seatCap+" seats left";
+    $("seats").textContent=st;$("sSeats").textContent=st;$("sPrice").textContent=money(cur,p);
+    $("tNGN").classList.toggle("on",cur==="NGN");$("tUSD").classList.toggle("on",cur==="USD");
+    var href=sold?"https://wa.me/"+C.whatsapp:(cur==="NGN"?C.checkoutNGN:C.checkoutUSD);
+    document.querySelectorAll("[data-cta]").forEach(function(a){a.href=href;a.target=sold?"_blank":"_self";
+      if(sold)a.firstChild&&(a.textContent="Join the waitlist")});
   }
-  window.setCur = function(c){ cur = c; render(); };
-  document.addEventListener("click", function(e){
-    var a = e.target.closest && e.target.closest("[data-cta]");
-    if(a && window.fbq){ fbq('track','InitiateCheckout',{value: cur==="NGN"?C.priceNGN:C.priceUSD, currency: cur}); }
-  });
+  window.setCur=function(c){cur=c;render()};
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-cta]");if(a&&window.fbq)fbq("track","InitiateCheckout",{value:cur==="NGN"?C.priceNGN:C.priceUSD,currency:cur})});
   render();
+
+  // sticky bar after hero
+  var sk=$("sticky"),hero=document.querySelector(".hero");
+  function onS(){var show=window.scrollY>hero.offsetHeight*0.8;sk.classList.toggle("show",show)}
+  window.addEventListener("scroll",onS,{passive:true});onS();
 })();
 </script>
 </body>

@@ -1,12 +1,8 @@
-# Deploy in about 10 minutes
+# Deploy
 
-1. Open index.html and edit the CONFIG block (search "const CONFIG"). Replace every "REPLACE" item.
-2. Put testimonial images in /testimonials (t1.jpg ... t6.jpg) or change the filenames in CONFIG.
-3. Add og.jpg (1200x630) in the root for WhatsApp/Facebook link previews.
-4. Edit the REPLACE lines in privacy.html and terms.html.
-5. Create the client's checkout links (Selar or Paystack payment page) in NGN and USD and paste them into CONFIG.
-6. Push the folder to a new GitHub repo, then on vercel.com choose Add New > Project > Import the repo > Deploy. No build settings needed.
-7. Add the client's domain in Vercel > Settings > Domains.
-8. Test: pay a small amount on the live link, open on a phone, and check the WhatsApp preview.
-
-Seat counter: change seatsTaken in CONFIG after each confirmed sale, then redeploy.
+1. Edit the CONFIG block near the bottom of index.html (search "var CONFIG"). Replace every REPLACE item. Yellow dashed boxes on the page are copy you must replace.
+2. Images: put testimonial screenshots in /testimonials and list them in CONFIG.results. Put payment proof in /proof and list in CONFIG.proof. Trainer photo: img/trainer.jpg. Video poster: img/poster.jpg. Link preview image: og.jpg (1200x630) in the root.
+3. Only use images that belong to the client's own business.
+4. Paste the client's NGN and USD checkout links into CONFIG.
+5. Push to GitHub, import in Vercel, deploy. No build settings needed.
+6. Test a small live payment from a phone and check the WhatsApp link preview.
