@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- REMOVE the next line when the page is ready to be found on Google -->
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Make Money with ChatGPT and Facebook Ads | Live Training</title>
 <meta name="description" content="A live training on finding buyers, writing ads with ChatGPT and running Facebook and Instagram ads to work toward your first $1,000 in sales.">
@@ -516,6 +518,7 @@ var CONFIG = {
     $("seats").textContent=st;$("sSeats").textContent=st;$("sPrice").textContent=money(cur,p);
     $("tNGN").classList.toggle("on",cur==="NGN");$("tUSD").classList.toggle("on",cur==="USD");
     var href=sold?"https://wa.me/"+C.whatsapp:(cur==="NGN"?C.checkoutNGN:C.checkoutUSD);
+    if(href.indexOf("REPLACE")>-1||href.indexOf("XXXX")>-1){console.warn("CONFIG checkout/WhatsApp link is still a placeholder");href="#join"}
     document.querySelectorAll("[data-cta]").forEach(function(a){a.href=href;a.target=sold?"_blank":"_self";
       if(sold)a.firstChild&&(a.textContent="Join the waitlist")});
   }
