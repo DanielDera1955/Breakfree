@@ -190,6 +190,35 @@ footer a{color:#cfe0ff}
 .sticky .t b{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-size:20px}
 .sticky .t span{display:block;font-size:12.5px;color:#c2410c;font-weight:700}
 .sticky .cta{padding:13px 18px;font-size:14px;box-shadow:0 0 0 3px rgba(33,107,225,.25)}
+
+/* v3 additions */
+.deliver{display:grid;gap:14px;margin-top:26px}
+@media(min-width:700px){.deliver{grid-template-columns:1fr 1fr}}
+.dcard{background:#fff;border:1px solid var(--line);border-left:6px solid var(--blue);border-radius:16px;padding:18px 20px;box-shadow:0 10px 24px rgba(11,42,91,.07)}
+.dcard b{display:block;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-size:18px;margin-bottom:4px;line-height:1.25}
+.dcard span{color:var(--muted);font-size:15.5px}
+.mathcard{background:var(--navy);color:#fff;border-radius:24px;padding:28px 24px;margin-top:26px}
+.mathrow{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-top:1px solid rgba(255,255,255,.18);font-size:16px}
+.mathrow:first-of-type{border-top:0}
+.mathrow b{font-family:"Plus Jakarta Sans",Inter,sans-serif;color:var(--yellow);white-space:nowrap}
+.mathrow.tot{font-size:18px}
+.mathcard .note{color:#aebfe3}
+.steps{margin-top:26px}
+.step{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step .n{flex:0 0 40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800}
+.step b{display:block;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-size:18px;line-height:1.25}
+.step span{color:var(--muted);font-size:15.5px}
+.trust{list-style:none;padding:0;margin:24px 0 0}
+.trust li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 54px;margin-bottom:12px;position:relative}
+.trust li:before{content:"\2713";position:absolute;left:16px;top:16px;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:800}
+.trust li b{display:block;font-family:"Plus Jakarta Sans",Inter,sans-serif;font-size:17px}
+.trust li span{color:var(--muted);font-size:15.5px}
+.whylow{background:var(--soft);border-radius:18px;padding:20px 22px;margin:22px auto 0;max-width:460px;text-align:left;font-size:15.5px}
+.whylow b{font-family:"Plus Jakarta Sans",Inter,sans-serif;display:block;margin-bottom:4px;font-size:17px}
+.refundbox{border:2px dashed var(--blue);border-radius:16px;padding:14px 16px;margin-top:16px;text-align:left;font-size:14.5px;color:var(--ink);background:#f7faff}
+.refundbox b{color:var(--blue)}
+.trustline{font-size:13.5px;color:var(--muted);margin:14px 0 0}
 .hide{display:none!important}
 .todo{background:#fff3b0;color:#0B2A5B!important;outline:1px dashed #b58900;padding:2px 6px;border-radius:4px}
 </style>
@@ -211,6 +240,7 @@ footer a{color:#cfe0ff}
       <div class="play"></div>
     </div>
     <div class="cta-row"><a class="cta" data-cta href="#">Show me how to get started</a></div>
+    <p class="trustline" id="capTxt"></p>
   </div>
 </header>
 
@@ -243,12 +273,7 @@ footer a{color:#cfe0ff}
 
 <section class="bluesec">
   <div class="wrap">
-    <span class="pill">My story</span>
-    <h2 style="margin-top:16px">I know how it feels because I was once like you.</h2>
-    <p class="lead todo">REPLACE: One honest line about where the trainer started, e.g. "Stuck, broke and unsure what to do next."</p>
-    <p class="todo">REPLACE: Two or three true sentences. How she found ChatGPT and Facebook Ads, and what changed. Only claims she can show proof for.</p>
-    <p>Now I want to go live with you and teach you the same method step by step.</p>
-    <hr class="rule">
+    <div id="storyBox" class="hide"><span class="pill">My story</span><h2 id="storyHead" style="margin-top:16px"></h2><div id="storyText"></div><hr class="rule"></div>
     <span class="pill">My promise</span>
     <p class="big">I can't promise you a specific amount of money. What I promise is a clear method, a real plan and honest answers to your questions.</p>
     <p>If you attend the live training and follow the steps, you will know how to build an offer, reach the right buyers and test ads with a budget you control. What you earn depends on your product, your effort and your testing.</p>
@@ -295,9 +320,9 @@ footer a{color:#cfe0ff}
     <div class="portrait">
       <img id="portrait" class="hide" alt="Your trainer">
       <div class="ph" id="pph">Add trainer photo (img/trainer.jpg)</div>
-      <div class="badge"><b id="hostName">REPLACE Trainer Name</b><span id="hostRole">REPLACE role, e.g. Digital advertising trainer</span></div>
+      <div class="badge hide" id="badge"><b id="hostName"></b><span id="hostRole"></span></div>
     </div>
-    <p class="center todo" style="margin-top:26px">REPLACE: One or two sentences on what the trainer will show you in this live training and the result students work toward.</p>
+    <p class="center" style="margin-top:26px" id="introText"></p>
     <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
   </div>
 </section>
@@ -312,6 +337,62 @@ footer a{color:#cfe0ff}
   </div>
   <div class="wrap wide">
     <div class="mods" id="mods"></div>
+    <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap wide">
+    <div class="center">
+      <span class="pill">What you walk away with</span>
+      <h2 style="margin-top:16px">By the end of the live session, you will have <span class="hl">real things in your hands</span></h2>
+      <p class="sub" style="max-width:560px;margin:0 auto">Not just notes. Not just motivation. You leave with work you can use the same day.</p>
+    </div>
+    <div class="deliver">
+      <div class="dcard"><b>A clear one-line offer</b><span>A sentence that tells a stranger what you sell, who it is for and why they should care.</span></div>
+      <div class="dcard"><b>A defined buyer profile</b><span>Who to target on Facebook and Instagram, and the interests and problems to build ads around.</span></div>
+      <div class="dcard"><b>Ad copy ready to test</b><span>Hooks, captions and calls to action written with ChatGPT for your own product.</span></div>
+      <div class="dcard"><b>A small-budget test plan</b><span>How much to spend, how long to run it and when to stop or scale.</span></div>
+      <div class="dcard"><b>A simple sales path</b><span>The route from ad to payment page or WhatsApp, so interest turns into orders.</span></div>
+      <div class="dcard"><b>A tracking checklist</b><span>The few numbers to watch so you never spend blind.</span></div>
+    </div>
+    <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
+  </div>
+</section>
+
+<section class="softsec">
+  <div class="wrap">
+    <div class="center">
+      <span class="pill">The numbers behind ads</span>
+      <h2 style="margin-top:16px">Ads are <span class="hl">maths</span> before they are magic</h2>
+      <p class="sub">Most beginners spend money without knowing what a sale should cost them. Here is the kind of simple calculation you will learn to do before you spend:</p>
+    </div>
+    <div class="mathcard">
+      <div class="mathrow"><span>Your product price</span><b>&#8358;5,000</b></div>
+      <div class="mathrow"><span>Ad budget for the test</span><b>&#8358;20,000</b></div>
+      <div class="mathrow"><span>Buyers the ad brings</span><b>6</b></div>
+      <div class="mathrow"><span>Cost to get one buyer</span><b>&#8358;3,333</b></div>
+      <div class="mathrow tot"><span>Sales minus ad spend</span><b>&#8358;10,000</b></div>
+      <p class="note" style="margin:16px 0 0">Example numbers for illustration only, not a result you should expect. Your product, price and audience will give different numbers. The point is knowing them before you scale.</p>
+    </div>
+    <p class="center" style="margin-top:22px">In the live training you will learn what these numbers mean, which ones to watch, and how to decide whether an ad is worth keeping.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="pill">Can I trust this?</span>
+      <h2 style="margin-top:16px">Fair question. Here is how we make it easy to check.</h2>
+      <p class="sub">You should not pay anyone you cannot verify. So here is what you can check for yourself before you pay.</p>
+    </div>
+    <ul class="trust">
+      <li><b>It is live, not a recorded video</b><span>You see the trainer on camera and can ask questions while she teaches.</span></li>
+      <li><b>You can talk to us before you pay</b><span>Message us on WhatsApp with any question. We reply with honest answers, even if the answer is that this is not right for you.</span></li>
+      <li><b>The refund terms are written down</b><span id="trustRefund"></span></li>
+      <li><b>Payment is on a secure checkout</b><span>You pay through an established payment platform, not by sending money to a personal account.</span></li>
+    </ul>
     <div class="cta-row"><a class="cta" data-cta href="#">Join the training now</a></div>
   </div>
 </section>
@@ -358,17 +439,34 @@ footer a{color:#cfe0ff}
   </div>
 </section>
 
+
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="pill">What happens next</span>
+      <h2 style="margin-top:16px">From payment to your first ad, in four steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><b>Reserve your seat</b><span>Tap the button and pay on the secure checkout in naira or USD.</span></div></div>
+      <div class="step"><div class="n">2</div><div><b>Get your access details</b><span>Your payment confirmation and access details come right after you pay.</span></div></div>
+      <div class="step"><div class="n">3</div><div><b>Join the live training</b><span id="whenStep">Join the live session at the date and time shared with you. Come ready with your product or idea.</span></div></div>
+      <div class="step"><div class="n">4</div><div><b>Apply it and ask questions</b><span>Put what you learn into action, and ask your follow-up questions on WhatsApp.</span></div></div>
+    </div>
+  </div>
+</section>
+
 <section class="pricesec" id="join">
   <div class="wrap center">
     <h2>Now here's something I really want you to understand</h2>
     <p class="sub">Most people do not fail because they are not smart. They fail because nobody walked them through the process. This training does that, live, with room for your questions.</p>
+    <div class="whylow"><b>Why is the price so low?</b>We priced it low on purpose so that everyone can afford to learn this skill, whatever their budget.</div>
     <div class="pricecard">
       <div class="toggle"><button id="tNGN" class="on" onclick="setCur('NGN')">Pay in Naira</button><button id="tUSD" onclick="setCur('USD')">Pay in USD</button></div>
       <div><span class="price" id="price"></span><span class="was hide" id="was"></span></div>
       <div class="seats" id="seats"></div>
       <ul class="incl" id="incl"></ul>
       <a class="cta full" data-cta href="#">Join the training now</a>
-      <p class="note" id="refund"></p>
+      <div class="refundbox"><b>Refund policy:</b> <span id="refund2"></span></div>
     </div>
   </div>
 </section>
@@ -409,31 +507,37 @@ footer a{color:#cfe0ff}
 <script>
 /* ==================== EDIT THIS BLOCK ==================== */
 var CONFIG = {
-  brand: "REPLACE Brand Name",
+  brand: "",                           // optional, shown in the footer
   marquee: "Live training",            // text in the top ribbon
   marqueeHighlight: "Limited seats",
   priceNGN: 15000,
   priceUSD: 12,
   originalPriceNGN: 0,                  // set only if the client really sold at a higher price before, else leave 0
   originalPriceUSD: 0,
-  checkoutNGN: "https://selar.com/REPLACE-NGN-LINK",
-  checkoutUSD: "https://selar.com/REPLACE-USD-LINK",
+  checkoutNGN: "",                      // paste the NGN checkout link here
+  checkoutUSD: "",                      // paste the USD checkout link here
   seatCap: 20,
   seatsTaken: 0,
   whatsapp: "234XXXXXXXXXX",
   videoEmbed: "",                       // e.g. https://www.youtube.com/embed/VIDEO_ID
   videoPoster: "img/poster.jpg",        // optional poster image
   trainerPhoto: "img/trainer.jpg",      // optional portrait
-  hostName: "REPLACE Trainer Name",
-  hostRole: "REPLACE role, e.g. Digital advertising trainer",
+  hostName: "",                        // optional: trainer name for the photo badge
+  hostRole: "",                        // optional: short role line under the name
   pixelId: "",
   stat: { value: "", caption: "" },     // e.g. value "1,000+", caption "people trained". Leave value empty to hide
-  refund: "REPLACE: Refund policy in one line.",
+  refund: "Not satisfied? Request a refund within 3 days of paying and your money will be returned. Just message us on WhatsApp with your name and payment receipt.",
   includes: [
-    "Live training session (REPLACE date, platform and length)",
-    "REPLACE: Replay access and for how long",
-    "REPLACE: Any bonus, template or community access"
+    "Live online training session",
+    "A step-by-step method you can apply to your own product",
+    "A chance to ask your questions live",
+    "3-day refund policy"
   ],
+  // Optional extras: leave empty to hide
+  story: [],                          // e.g. ["Where she started...", "What changed..."]
+  storyHeading: "",                   // e.g. "I know how it feels because I was once like you."
+  introText: "A live, practical session where you learn how to find buyers and run your first Facebook and Instagram ads, step by step.",
+  sessionWhen: "",                    // e.g. "Saturday 6 December, 4pm WAT on Zoom"
   // Student results: images in /testimonials. Fill amount and note only with what the screenshot really shows.
   results: [
     // { img: "t1.jpg", tag: "Revenue", amount: "REPLACE", note: "REPLACE one line about this result" }
@@ -455,9 +559,11 @@ var CONFIG = {
   faq: [
     ["Do I need experience with ads?", "No. The training starts from the basics and walks you through each step."],
     ["Do I need a big budget?", "No. You will learn to test with a small budget first. You decide how much you are comfortable spending."],
+    ["Is this a recorded course?", "No. It is a live session, so you can ask questions as the trainer teaches."],
+    ["What do I need to attend?", "A phone is enough. Come with your product or an idea of what you want to sell."],
+    ["How do refunds work?", "You have 3 days after payment to ask for a refund. Message us on WhatsApp with your name and payment receipt and your money will be returned."],
     ["Is a result guaranteed?", "No. Results depend on your product, offer, effort and testing. The training gives you the method and the plan."],
-    ["When and where is the training?", "REPLACE: Date, time (WAT) and platform."],
-    ["Will there be a replay?", "REPLACE: Yes or no, and for how long."],
+    ["When and where is the training?", "The date, time and joining details are shared with you after you pay."],
     ["Can I pay from outside Nigeria?", "Yes. Switch to Pay in USD in the price box and use the USD checkout."],
     ["What if I have a payment problem?", "Message us on WhatsApp with your name and payment receipt and we will sort it out."]
   ]
@@ -476,8 +582,8 @@ var CONFIG = {
   // month pill
   var ms=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];$("nowMonth").textContent=ms[new Date().getMonth()];
 
-  $("hostName").textContent=C.hostName;$("hostRole").textContent=C.hostRole;$("footBrand").textContent=C.brand+". All rights reserved.";
-  $("wa").href="https://wa.me/"+C.whatsapp;$("refund").textContent=C.refund;
+  $("hostName").textContent=C.hostName;$("hostRole").textContent=C.hostRole;if(C.hostName)$("badge").classList.remove("hide");$("footBrand").textContent=(C.brand?C.brand+". ":"")+"All rights reserved.";$("introText").textContent=C.introText;if(C.story&&C.story.length){$("storyBox").classList.remove("hide");$("storyHead").textContent=C.storyHeading||"My story";$("storyText").innerHTML=C.story.map(function(p,i){return "<p"+(i===0?' class="lead"':"")+">"+esc(p)+"</p>"}).join("")}if(C.sessionWhen){$("whenStep").textContent="Join the live session: "+C.sessionWhen+". Come ready with your product or idea.";C.includes[0]="Live online training session ("+C.sessionWhen+")"}
+  $("wa").href=(C.whatsapp&&C.whatsapp.indexOf("X")<0)?"https://wa.me/"+C.whatsapp:"#";$("refund2").textContent=C.refund;$("trustRefund").textContent=C.refund;$("capTxt").textContent="Live online training \u00B7 Only "+C.seatCap+" seats \u00B7 Clear refund policy";
 
   // images with graceful fallback
   function tryImg(el,src,ph){var im=new Image();im.onload=function(){el.src=src;el.classList.remove("hide");if(ph)ph.classList.add("hide")};im.src=src}
@@ -518,7 +624,7 @@ var CONFIG = {
     $("seats").textContent=st;$("sSeats").textContent=st;$("sPrice").textContent=money(cur,p);
     $("tNGN").classList.toggle("on",cur==="NGN");$("tUSD").classList.toggle("on",cur==="USD");
     var href=sold?"https://wa.me/"+C.whatsapp:(cur==="NGN"?C.checkoutNGN:C.checkoutUSD);
-    if(href.indexOf("REPLACE")>-1||href.indexOf("XXXX")>-1){console.warn("CONFIG checkout/WhatsApp link is still a placeholder");href="#join"}
+    if(!href||href.indexOf("REPLACE")>-1||href.indexOf("XXXX")>-1){console.warn("CONFIG checkout/WhatsApp link is still a placeholder");href="#join"}
     document.querySelectorAll("[data-cta]").forEach(function(a){a.href=href;a.target=sold?"_blank":"_self";
       if(sold)a.firstChild&&(a.textContent="Join the waitlist")});
   }
